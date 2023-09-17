@@ -6,14 +6,16 @@ Python Real time Face Detection
 ## installation:
 
 ```bash
-pip install -r requirements.txt
+    pip install -r requirements.txt
 ```
 
 ## run:
 
 ```bash
-python app.py
+    python app.py
 ```
+
+
 
 
 # demo
@@ -24,4 +26,7 @@ python app.py
 
 ### output:
 
-<img src="./Media/out.gif">
+<video controls loop>
+  <source src="./Media/out.gif" type="video/gif">
+  Your browser does not support the video tag.
+</video>
