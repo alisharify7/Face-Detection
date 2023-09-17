@@ -23,7 +23,8 @@ global CheckFalg
 CheckFalg = True
 faceMatch = False
 FaceData = None
-sourceImage = cv.imread("./img.jpg")
+sourceImage = cv.imread("./Media/source.png")
+sourceName = "Will Smith"
 
 cap = cv.VideoCapture(0)
 
@@ -62,6 +63,8 @@ timer = time.time()
 imageCounter = 0
 FPS = 0
 
+
+print("Press Q for exit..")
 while cap.isOpened():
 
     ret, frame = cap.read()
@@ -94,7 +97,7 @@ while cap.isOpened():
 
         # add person name to frame
         frame = cv.putText(img=frame,
-            org=(endPoint[0]-100, endPoint[1]+20), text="Name",
+            org=(endPoint[0]-100, endPoint[1]+20), text=sourceName,
             color=(0, 0, 255), fontFace=cv.FONT_HERSHEY_DUPLEX, thickness=2, fontScale=0.6)
 
         frame = cv.putText(img=frame,
