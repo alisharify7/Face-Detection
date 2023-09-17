@@ -12,7 +12,6 @@ import datetime
 from threading import Thread
 
 import cv2 as cv
-from memory_profiler import profile
 from deepface import DeepFace
 
 
@@ -50,6 +49,7 @@ def checkFace(frame):
 
 
 # def AnalizyeFace(frame):
+#  Analizye face motion and race and gender
 #     global Counter
 #     Counter += 1
 #     if Counter  == 60:
@@ -63,8 +63,6 @@ timer = time.time()
 imageCounter = 0
 FPS = 0
 
-
-print("Press Q for exit..")
 while cap.isOpened():
 
     ret, frame = cap.read()
@@ -75,12 +73,9 @@ while cap.isOpened():
         counter = 0
         print(f"Thread Started !{imageCounter}")
         Thread(target=checkFace, args=(frame.copy(), )).start()
-
-
         CheckFalg = False
 
     if faceMatch:
-
         frame = cv.putText(img=frame,
             org=(0, 690) ,text="Face Match",  color=(0, 0, 255),
             fontFace=cv.FONT_HERSHEY_DUPLEX, thickness=3, fontScale=1.5)
