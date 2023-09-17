@@ -26,7 +26,4 @@ Python Real time Face Detection
 
 ### output:
 
-<video controls loop>
-  <source src="./Media/out.gif" type="video/gif">
-  Your browser does not support the video tag.
-</video>
+<img src="./Media/out.gif" >
