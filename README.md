@@ -20,9 +20,14 @@ Python Real time Face Detection
 
 # demo
 
-### input image:
+### source image:
 
 <img src="./Media/source.png">
+
+### video input:
+
+<img src="./Media/video.gif" >
+
 
 ### output:
 
