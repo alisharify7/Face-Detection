@@ -17,9 +17,11 @@ python app.py
 
 
 # demo
-Source Image:
+
+### input image:
 
 <img src="./Media/source.png">
 
-output:
+### output:
+
 <img src="./Media/out.gif">
