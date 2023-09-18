@@ -1,3 +1,2 @@
-memory_profiler
 deepface
 opencv-python
