@@ -1,5 +1,5 @@
 """
-Face detenction Module
+Face detection Module
 
 @auther : alisharify
 2023/9/2 - 1402/6/8
@@ -17,9 +17,9 @@ from deepface import DeepFace
 
 global faceMatch
 global FaceData
-global CheckFalg
+global CheckFlag
 
-CheckFalg = True
+CheckFlag = True
 faceMatch = False
 FaceData = None
 sourceImage = cv.imread("./Media/source.png")
@@ -30,11 +30,11 @@ cap = cv.VideoCapture(0)
 
 def checkFace(frame):
     """ 
-        this Function take an image frame and 
-        check for face and compare face with source image
+        This function takes an image frame and 
+        check for the face and compare the face with the source image
     """
     global faceMatch
-    global CheckFalg
+    global CheckFlag
     global FaceData
 
 
@@ -45,11 +45,11 @@ def checkFace(frame):
     except Exception as e:
         faceMatch = False
 
-    CheckFalg = True
+    CheckFlag = True
 
 
 # def AnalizyeFace(frame):
-#  Analizye face motion and race and gender
+#  Analizye's face motion and race and gender
 #     global Counter
 #     Counter += 1
 #     if Counter  == 60:
@@ -69,11 +69,11 @@ while cap.isOpened():
     if not ret:
         break
 
-    if CheckFalg:
+    if CheckFlag:
         counter = 0
         print(f"Thread Started !{imageCounter}")
         Thread(target=checkFace, args=(frame.copy(), )).start()
-        CheckFalg = False
+        CheckFlag = False
 
     if faceMatch:
         frame = cv.putText(img=frame,
@@ -87,7 +87,7 @@ while cap.isOpened():
         startPoint = (FaceData[x]['x'], FaceData[x]['y'],)
         endPoint = (FaceData[x]['x']+FaceData[x]['w'], FaceData[x]['y']+FaceData[x]['h'],)
         
-        # draw a rectangle around the face in frame
+        # draw a rectangle around the face in the frame
         frame = cv.rectangle(frame, startPoint, endPoint, color=(0 , 255, 0), thickness=3)
 
         # add person name to frame
