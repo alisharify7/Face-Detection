@@ -1,20 +1,19 @@
 # Face-Detection
 Python Real time Face Detection
 
-lib:
+
+### lib:
 
 - opencv-Python
 - deepface
 
 
-docs:
-
-opencv github + docs:
+#### opencv github + docs:
 
          https://github.com/opencv/opencv
          https://opencv.org/
 
-deepface github + doc:
+#### deepface github + doc:
 
     https://github.com/serengil/deepface
 
