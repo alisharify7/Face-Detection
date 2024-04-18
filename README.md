@@ -1,10 +1,11 @@
 # Face-Detection
-Python Real time Face Detection
+Python Real-time Face Detection
 
+<a href="https://www.coffeete.ir/alisharify7">Donate/Support [Optional]</a>
 
 ### lib:
 
-- opencv-Python
+- OpenCV-Python
 - deepface
 
 
